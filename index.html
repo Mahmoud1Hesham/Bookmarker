@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+        <section class="s-content w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+            <h2 class="text-center d-inline"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+            <div class="input-1 w-100">
+                <div class="mb-3">
+                    <label class="pb-2 fw-semibold" for="sName"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                    <input  type="text" class="form-control" id="sName" placeholder="Site Name">
+                </div>
+            </div>
+            <div class="input-2 w-100">
+                <div class="mb-3">
+                    <label class="pb-2 fw-semibold" for="sAdress"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input  type="text" class="form-control" id="sAdress" placeholder="Site URL">
+                </div>
+                <div class="subbtn">
+                    <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </section>
+        <table class="table mt-4 text-center bg-light">
+            <thead>
+                <th class="text-capitalize">Index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+            </thead>
+            <tbody id="tableContent">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-4 py-4">
+                    <div class="d-flex justify-content-between py-2">
+                        <div class="circles d-flex align-content-center flex-wrap">
+                  <span class="rounded-circle me-2"></span>
+                  <span class="rounded-circle me-2"></span>
+                  <span class="rounded-circle me-2"></span>
+                </div>
+                        <button class="btn border-0" id="closeBtn" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-solid fa-xmark close fs-3"></i>
+                          </button>
+                    </div>
+                    <p class="m-0 py-2">
+                        Site Name or Url is not valid, Please follow the rules below :
+                      </p>
+                      <ol class="rules list-unstyled m-0">
+                        <li>
+                          <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                          contain at least 3 characters
+                        </li>
+                        <li>
+                          <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                          valid one
+                        </li>
+                      </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/cb076d1c16.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
